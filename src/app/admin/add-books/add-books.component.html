@@ -1,0 +1,30 @@
+<div class="container">
+
+  <form (ngSubmit)="formSubmitted()" #f = "ngForm">
+    <label>Book Title</label>
+    <input name='bookTitle' type="text"class ="form-control"ngModel>
+    
+    <label for="author">Author</label>
+    <input name='author' type="text"class ="form-control"ngModel>
+    
+    <label for="description">Description</label>
+    <textarea class="form-control" rows="5"  name='description' type="text" ngModel></textarea>
+
+    <label for="isbn">ISBN</label>
+    <input name='isbn' type="text"class ="form-control"ngModel>
+
+    <label for="thumbnailImage">Thumbnail Image</label>
+    <input name='thumbnailImage' type="text"class ="form-control"ngModel>
+    
+    <label for="totalBooks">Total books</label>
+    <input name='totalBooks' type="number"class ="form-control"ngModel>
+
+    <button class="btn btn-primary" type="submit"  >submit</button>
+    <button class="btn btn-danger" (click)="back()">Cancel/back</button>
+  </form>
+
+  <label for="isbn">ISBN</label>
+  <input name='isbn' type="text"[(ngModel)]="Isbn">
+
+  <button class="btn btn-info" (click)= "addBookViaISBN()">add via isbn</button>
+</div>

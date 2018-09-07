@@ -1,0 +1,35 @@
+<div *ngIf='!loading' class="container-fluid">
+  
+    <div class="row" *ngFor= 'let issue of issuedBookDetail'>
+      <div class="col-md-3 col-sm-4 col-xs-12">
+          <img class="bood-detail-img"src={{issue.book.thumbnailImage}} alt="">
+          <button  class="btn btn-success"(click)="bookReturn(issue)">Return </button>
+          <button  class="btn btn-success"(click)="bookRenew(issue)">Renew </button>
+      </div>
+      <div class="col-md-9 col-sm-8 col-xs-12">
+          <h3>{{issue.book.bookTitle}}</h3>
+          <p>--{{issue.book.author}}</p>
+    
+          <label for="">Isbn</label>
+          <p>{{issue.book.isbn}}</p>
+    
+          <label for="">Description</label>
+          <p>{{issue.book.description}}</p>
+    
+          <label for="">Category</label>
+          <p *ngFor = 'let cat of issue.book.categories'>
+            {{cat}}
+          </p>
+          <label for="">Issued date</label>
+          <p>{{issue.issuedDate}}</p>
+          <p>{{returnDate}}</p>
+
+
+      </div>
+      
+
+
+    </div>
+    
+    
+    </div>

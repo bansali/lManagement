@@ -1,0 +1,25 @@
+<div class="header container-fluid">
+  <div class="row">
+      <h3 (click)="home()" class="home-title col-md-4 col-sm-6 col-xs-4">
+       Library Management
+      </h3>
+      <div class="col-md-8 col-sm-6 col-xs-8">
+            <div class="dropdown rightAlign">
+                <img class="rightAlign dropdown-toggle profile-icon" data-toggle="dropdown" src="../../../assets/images/profileicon.png" alt="">    
+                            
+                <ul  class="dropdown-menu">
+                    <li><a (click)="menuHome()">Home</a></li>
+                    <li><a (click)="menuProfile()">Profile</a></li>
+                    <li><a (click)="menuMyBooks()">My Books</a></li>
+                    <li><a (click)="menuSuggestions()">Suggestions</a></li>
+                    <li><a (click)="menuAddBook()">Add Books</a></li>
+                    <li><a (click)="menuIssuedBooks()">Issued Books</a></li>
+                </ul>
+            </div>   
+            <button class="rightAlign btn btn-primary" (click)='loginandout()'>login</button>
+            <button class="rightAlign btn btn-primary" (click)='register()'>register</button>
+      </div>
+  </div>
+</div>
+
+

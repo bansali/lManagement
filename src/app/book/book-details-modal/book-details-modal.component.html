@@ -1,0 +1,8 @@
+<div  width="500px">
+  <h3>{{data.bookTitle}}</h3>
+  <p>--{{data.author}}</p>
+  <label for="">Description</label>
+  <p class="limit-paragraph">{{data.description}}</p>
+  <button class="btn btn-success"(click)="modalButton('moreinfo')">More</button>
+  <button class ="btn btn-danger" (click)="modalButton('close')">Close</button>
+</div>

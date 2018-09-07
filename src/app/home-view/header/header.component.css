@@ -1,0 +1,25 @@
+.container {
+    display: block;
+    overflow: auto;
+    min-height: 100%;
+    background-color: black;
+}
+.home-title{
+    color: white;
+}
+.header{
+    color:white;
+    background-color: black;
+}
+.rightAlign {
+    float :right;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .profile-icon{
+    width: 48px;
+    
+  }
+  .dropdown-menu{
+    left: -100px;
+  }

@@ -1,0 +1,18 @@
+<form (ngSubmit)="formSubmitted()" #f = "ngForm" >
+    <h3>login</h3>
+    <label for="userName">User Name</label>
+    <input type="text" name="userName" id="userName"ngModel>
+  
+    <label for="password">Password</label>
+    <input type="password" name="password" id= "password"ngModel>
+    <button type="submit">Submit</button>
+  </form>
+  
+  
+  <button (click)= "socialSignIn('google')">Signin in with Google</button> 
+  <button (click)= "socialSignIn('facebook')">Signin in with facebook</button> 
+  <button (click)= "socialLogout('facebook')">signOut</button>
+  <button (click)="accessFriendList()">friendlist</button>
+  <!--
+  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+  <a href="#" (click)="signOut()">Sign out</a>-->

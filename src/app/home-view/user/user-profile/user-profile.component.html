@@ -1,0 +1,56 @@
+<div class="container"  *ngIf = "userProfileState">
+    <div *ngIf ="!editProfileState">
+        <button class="btn btn-primary"(click)="editProfile()">Edit</button>
+        <div class="row">
+            <div class="col-md-3">
+              <img *ngIf= userProfilePic src={{userProfilePic}} width="100px" alt="">
+            </div>
+            <div class="col-md-9">
+             <h3>{{userProfile.userName}}</h3>
+             <p>{{userProfile.emailId}}</p>
+             
+            </div>
+        </div>
+    </div>
+    <div *ngIf ="editProfileState">
+          <form [formGroup] = "editProfileForm" (ngSubmit)="onSubmit()">
+              <div class = "form-group">
+                <div>
+                  <label> User Name</label>
+                  <input type="text"
+                    id= "userName" 
+                    formControlName = "userName"
+                    class ="form-control" >
+                    <!-- <span *ngIf="!signUpForm.get('projectName').valid && signUpForm.get('projectName').touched"> test cannot be used as project name</span> -->
+                  </div>
+                  <div>
+                    <label> e-Mail </label>
+                    <input type="text"
+                      id = "email" 
+                      formControlName = "email"
+                      class = "form-control" 
+                      >
+                    <!-- <span *ngIf="!signUpForm.get('email').valid && signUpForm.get('email').touched">enter valid email</span> -->
+                  </div>
+                  <!-- <label> Genre </label>
+                  <select  id = "genre" 
+                  formControlName = "genre"
+                  class = "form-control">
+                    <option value="fiction">Stable</option>
+                    <option value="fan">Critical</option>
+                    <option value="finished">Finished</option>
+                  </select> 
+                [disabled] = "!signUpForm.valid"-->
+                  <button class="btn btn-primary" type = "submit" >Submit</button>
+                <!-- File input for upload without using the plugin. -->
+                <input id="photo" type="file" />
+                <!-- button to trigger the file upload when submitted -->
+                <button type="button" class="btn btn-success btn-s" (click)="upload()">
+                Upload with method 2
+                </button>
+            </div>
+            </form>
+    </div>
+    
+  </div>
+  

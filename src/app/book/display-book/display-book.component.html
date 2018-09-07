@@ -1,0 +1,25 @@
+<div class="container-fluid">
+<div class="row">
+  <div class="col-md-3 col-sm-4 col-xs-12">
+      <img class="bood-detail-img"src={{currentBook.thumbnailImage}} alt="">
+      <button *ngIf="bookAvaliable" class="btn btn-success"(click)="bookIssue()">Issue</button>
+  </div>
+  <div class="col-md-9 col-sm-8 col-xs-12">
+      <h3>{{currentBook.bookTitle}}</h3>
+      <p>--{{currentBook.author}}</p>
+
+      <label for="">Isbn</label>
+      <p>{{currentBook.isbn}}</p>
+
+      <label for="">Description</label>
+      <p>{{currentBook.description}}</p>
+
+      <label for="">Category</label>
+      <p *ngFor = 'let cat of currentBook.categories'>
+        {{cat}}
+      </p>
+  </div>
+</div>
+
+
+</div>

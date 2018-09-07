@@ -1,0 +1,9 @@
+<form (ngSubmit)="formSubmitted()" #f = "ngForm" >
+    <h3>register</h3>
+    <label for="userName">User Name</label>
+    <input type="text" name="userName" id="userName"ngModel>
+  
+    <label for="password">Password</label>
+    <input type="password" name="password" id= "password"ngModel>
+    <button type="submit">Submit</button>
+  </form>

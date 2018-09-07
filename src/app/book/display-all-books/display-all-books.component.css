@@ -1,0 +1,23 @@
+/* .example-card {
+    max-width: 120px;
+    max-height: 180px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  } */
+.book-card{
+  padding: 2px;
+  border-radius: 20px;
+  height: 180px;
+}
+.book-detail{
+  position: relative;
+  bottom: 150px;
+  left: 180px;
+z-index: 9;
+  background-color: rgb(250, 46, 46);
+  height: 100px;
+  width: 80px;
+}

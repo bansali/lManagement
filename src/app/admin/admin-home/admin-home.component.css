@@ -1,0 +1,13 @@
+.libraryHeader {
+    color:white;
+    background-color: black;
+   
+}
+.adminTitle{
+    margin:10px;
+}
+.rightAlign {
+  float :right;
+  margin-top: 10px;
+  margin-left: 10px;
+}
